@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabir khan(Tech Sabir)~~Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Sabir Khan (Tech Sabir) ~ Portfolio</title>
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- NAVBAR -->
     <div class="navbar" id="home">
         <div class="logo">
-            <img src="img/sabir-removebg-preview.png"/>
+            <img src="img/sabir-removebg-preview.png" alt="TechSabir Logo"/>
         </div>
-        <nav class="nav">
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
+
+        <nav class="nav" id="nav-menu">
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#aboutme">About</a></li>
@@ -19,104 +24,154 @@
                 <li><a href="#project">Projects</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
-
             </ul>
         </nav>
     </div>
-    <div class="box" style="margin-top: 75px;">
-        <div class="img" style="margin-top: 30px;">
-            <img src="sabir khan.jpg"/>
+
+    <!-- PROFILE CARD -->
+    <div class="box">
+        <div class="img">
+            <img src="sabir khan.jpg" alt="Sabir Khan"/>
         </div>
-        <h1 class="name">Sabir Salaar
-        <span class="badge">TechSabir</span>
+        <h1 class="name">
+            Sabir Salaar
+            <span class="badge">TechSabir</span>
         </h1>
         <p class="role">Tech Support • Video Editing • Digital Marketing</p>
         <div class="cta">
-        <a class="btn email" href="mailto:sabirrayabka@gmail.com" target="_blank">Email Me</a>
-        <a class="btn whatsapp" href="https://wa.me/917410945190?text=Hello%20Sabir" target="_blank">WhatsApp</a>        </div>
+            <a class="btn email" href="mailto:sabirrayabka@gmail.com" target="_blank">Email Me</a>
+            <a class="btn whatsapp" href="https://wa.me/917410945190?text=Hello%20Sabir" target="_blank">WhatsApp</a>
+        </div>
         <div class="socials">
-        <a href="https://www.instagram.com/muh_sabir2967" target="_blank">Instagram</a>           
-        <a href="https://www.linkedin.com/in/sabir-khan-2a4339389" target="_blank" class="link">LinkedIn</a>        </div>
+            <a class="instagram" href="https://www.instagram.com/muh_sabir2967" target="_blank">Instagram</a>
+            <a class="linkedin" href="https://www.linkedin.com/in/sabir-khan-2a4339389" target="_blank">LinkedIn</a>
+        </div>
     </div>
-    <section class="about card" id="aboutme" style="margin-top: 50px;">
-      <h2>About Me</h2>
-      <p>Hi! I’m Sabir from Alwar. I love technology and creative work. I help people with tech support, video editing and digital marketing.<br> I enjoy solving problems, making engaging videos and helping small businesses grow online.</p>
-    </section>
-    <section class="skills" id="skills" style="margin-top: 50px;">
-        <h2>My <span style="color: #ff4a00;">Skills</span></h2>
-        <div class="progressbar">
-            <label class="text">HTML</label><br>
-            <progress class="progress" value="70" max="100"></progress>
-        </div>
-         <div class="progressbar">
-            <label class="text" style="margin-top: 7px;">CSS</label><br>
-            <progress class="progress" style="margin-top: 20px;" value="60" max="100"></progress>
-        </div>
-        </div>
-    </section>
-    <section class="project" id="project" style="margin-top: 50px;">
-        <h2>My <span style="color: #ff4a00;">Project</span></h2>
-        <div class="project1">
-            <article class="article">
-               <h3>📌Fox University Website</h3>
-               <p>I designed a static university website as a practice project.
-               This website includes a homepage, courses section, about section, and contact page.
-               The main purpose of this project was to improve my HTML structure and CSS styling skills.</p>
-            </article>
 
-        </div>
-        <div class="project1">
-            <article class="article">
-                <h3>📌Burger King Website</h3>
-                <p>I created a food website inspired by Burger King as a practice project.
-                The website shows food items, images, pricing sections, and buttons.
-                This project helped me understand website layout and image positioning.</p>
-            </article>
-            
-        </div>
-        <div class="project1">
-            <article class="article">
-                <h3>📌Personal Portfolio Website</h3>
-                <p>I developed my own personal portfolio website to showcase my skills, projects, and contact details.
-                This portfolio helps me present myself as a web developer.</p>
+    <!-- ABOUT -->
+    <section class="section-card" id="aboutme">
+        <h2>About Me</h2>
+        <p>Hi! I'm Sabir from Alwar. I love technology and creative work. I help people with tech support, video editing and digital marketing.<br><br>
+        I enjoy solving problems, making engaging videos and helping small businesses grow online.</p>
+    </section>
 
-            </article>
-            
+    <!-- SKILLS -->
+    <section class="section-card skills-card" id="skills">
+        <h2>My <span style="color:#ff4a00;">Skills</span></h2>
+
+         <div class="skill-row">
+            <span class="skill-label">AI</span>
+            <div class="skill-bar-wrap">
+                <div class="skill-bar-fill" style="width:70%"></div>
+            </div>
+            <span class="skill-pct">70%</span>
+        </div>
+         <div class="skill-row">
+            <span class="skill-label">CSS</span>
+            <div class="skill-bar-wrap">
+                <div class="skill-bar-fill" style="width:60%"></div>
+            </div>
+            <span class="skill-pct">60%</span>
+        </div>
+        <div class="skill-row">
+            <span class="skill-label">HTML</span>
+            <div class="skill-bar-wrap">
+                <div class="skill-bar-fill" style="width:70%"></div>
+            </div>
+            <span class="skill-pct">70%</span>
+        </div>
+        <div class="skill-row">
+            <span class="skill-label">Python</span>
+            <div class="skill-bar-wrap">
+                <div class="skill-bar-fill" style="width:50%"></div>
+            </div>
+            <span class="skill-pct">50%</span>
+        </div>
+        <div class="skill-row">
+            <span class="skill-label">JavaScript</span>
+            <div class="skill-bar-wrap">
+                <div class="skill-bar-fill" style="width:50%"></div>
+            </div>
+            <span class="skill-pct">50%</span>
+        </div>
+       
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section-card" id="project">
+        <h2>My <span style="color:#ff4a00;">Projects</span></h2>
+        <div class="project-grid">
+            <div class="project-item">
+                <h3>📌 Fox University Website</h3>
+                <p>I designed a static university website as a practice project. This website includes a homepage, courses section, about section, and contact page. The main purpose of this project was to improve my HTML structure and CSS styling skills.</p>
+            </div>
+            <div class="project-item">
+                <h3>📌 Burger King Website</h3>
+                <p>I created a food website inspired by Burger King as a practice project. The website shows food items, images, pricing sections, and buttons. This project helped me understand website layout and image positioning.</p>
+            </div>
+            <div class="project-item">
+                <h3>📌 Personal Portfolio Website</h3>
+                <p>I developed my own personal portfolio website to showcase my skills, projects, and contact details. This portfolio helps me present myself as a web developer.</p>
+            </div>
         </div>
     </section>
-    <section class="education" id="education" style="margin-top: 50px;">
-        <h3 style="margin-top: 10px;">Education</h3><br>
-        <div class="class">
-            <h4>Bachelor of Computer Applications</h4>
-            <p>1st Year – Ongoing<br>Sunrise University<br>2025 – Present</p>
-        </div>
-        <div class="class" style="margin-top: 20px;">
-            <h4>Senior Secondary (12th)</h4>
-            <p>[RBSE Board]<br>
-            2025</p>
-        </div>
-        <div class="class" style="margin-top: 20px;">
-            <h4>Senior Secondary (10th)</h4>
-            <p>[RBSE Board]<br>
-            2023</p>
+
+    <!-- EDUCATION -->
+    <section class="section-card" id="education">
+        <h2>Education</h2>
+        <div class="edu-list">
+            <div class="edu-item">
+                <h4>Bachelor of Computer Applications</h4>
+                <p>1st Year – Ongoing<br>Sunrise University<br>2025 – Present</p>
+            </div>
+            <div class="edu-item">
+                <h4>Senior Secondary (12th)</h4>
+                <p>RBSE Board — 2025</p>
+            </div>
+            <div class="edu-item">
+                <h4>Secondary (10th)</h4>
+                <p>RBSE Board — 2023</p>
+            </div>
         </div>
     </section>
-    <section class="contact-card" id="contact" style="margin-top: 50px;">
-        <div class="contact1">
-            <h2>Contact</h2>
+
+    <!-- CONTACT -->
+    <section class="section-card" id="contact">
+        <h2>Contact</h2>
+        <div class="contact-info">
             <p><strong>Phone:</strong> +91 7410945190</p>
             <p><strong>Email:</strong> sabirrayabka@gmail.com</p>
             <p><strong>Location:</strong> Alwar, Rajasthan, India</p>
-        <div class="contact2">
-            <a class="btn" href="tel:+917410945190">Call</a>
-            <a class="btn" href="mailto:sabirrayabka@gmail.com">Send Email</a>
         </div>
-    </div>
-
+        <div class="contact-btns">
+            <a class="btn-outline" href="tel:+917410945190">📞 Call</a>
+            <a class="btn-outline" href="mailto:sabirrayabka@gmail.com">✉️ Send Email</a>
+        </div>
     </section>
-    <footer class="footer">
-            Built with ❤️ by Sabir — © <span id="year">2026</span>
+
+    <!-- FOOTER -->
+    <footer>
+        Built with ❤️ by Sabir — © <span id="year"></span>
     </footer>
-    
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Hamburger menu toggle
+        const toggle = document.getElementById('menu-toggle');
+        const nav = document.getElementById('nav-menu');
+
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // Close menu when a nav link is clicked (mobile UX)
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
