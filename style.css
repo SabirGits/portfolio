@@ -433,3 +433,143 @@
                 text-align: center;
             }
         }
+        /* ── TYPING ANIMATION CSS ── */
+.typing-wrapper {
+    min-height: 28px;
+    margin: 6px 0 14px;
+}
+
+.typing-text {
+    color: var(--accent2);
+    font-size: clamp(14px, 3.5vw, 17px);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.typing-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1.1em;
+    background: var(--accent2);
+    vertical-align: middle;
+    margin-left: 2px;
+    animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* ── SKILL BAR ANIMATION CSS ── */
+.skill-bar-fill {
+    width: 0 !important;
+    transition: width 1.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-bar-fill.animated {
+    width: var(--target-width) !important;
+}
+
+/* ── HOVER EFFECTS CSS ── */
+
+/* Buttons – scale + glow */
+.btn, .btn-outline {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease !important;
+}
+
+.btn:hover, .btn-outline:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 18px rgba(124, 58, 237, 0.35);
+    opacity: 1 !important;
+}
+
+.btn.whatsapp:hover {
+    box-shadow: 0 0 18px rgba(37, 211, 102, 0.4);
+}
+
+/* Cards – subtle lift */
+.project-item, .edu-item, .section-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+    border-color: rgba(124, 58, 237, 0.25);
+}
+
+.section-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Navbar links – underline animation */
+.nav ul li a {
+    position: relative;
+    border-bottom: none !important;
+    transition: color 0.25s ease;
+}
+
+.nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent2), var(--accent));
+    transition: width 0.3s ease, left 0.3s ease;
+    border-radius: 2px;
+}
+
+.nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Social links – color + glow */
+.socials a {
+    transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+}
+
+.socials a.instagram:hover {
+    box-shadow: 0 0 16px rgba(214, 41, 118, 0.4);
+}
+
+.socials a.linkedin:hover {
+    box-shadow: 0 0 16px rgba(10, 102, 194, 0.4);
+}
+
+/* ── GLASSMORPHISM CARD ENHANCEMENT ── */
+.section-card, .project-item, .box {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.box {
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* ── SKILL ICONS CSS ── */
+.skill-label i {
+    margin-right: 6px;
+    font-size: 15px;
+    vertical-align: middle;
+    width: 18px;
+    text-align: center;
+    display: inline-block;
+}
+
+/* ── MOBILE SAFE ── */
+@media (max-width: 768px) {
+    .project-item:hover,
+    .section-card:hover {
+        transform: none;
+    }
+
+    .btn:hover, .btn-outline:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}

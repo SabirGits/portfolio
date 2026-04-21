@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabir Khan (Tech Sabir) ~ Portfolio</title>
    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
 
@@ -37,6 +38,9 @@
             Sabir Salaar
             <span class="badge">TechSabir</span>
         </h1>
+        <div class="typing-wrapper">
+        <span class="typing-text" id="typing-text"></span><span class="typing-cursor"></span>
+       </div>
         <p class="role">Tech Support • Video Editing • Digital Marketing</p>
         <div class="cta">
             <a class="btn email" href="mailto:sabirrayabka@gmail.com" target="_blank">Email Me</a>
@@ -60,41 +64,40 @@
         <h2>My <span style="color:#ff4a00;">Skills</span></h2>
 
          <div class="skill-row">
-            <span class="skill-label">AI</span>
-            <div class="skill-bar-wrap">
-                <div class="skill-bar-fill" style="width:70%"></div>
-            </div>
-            <span class="skill-pct">70%</span>
-        </div>
-         <div class="skill-row">
-            <span class="skill-label">CSS</span>
-            <div class="skill-bar-wrap">
-                <div class="skill-bar-fill" style="width:60%"></div>
-            </div>
-            <span class="skill-pct">60%</span>
-        </div>
-        <div class="skill-row">
-            <span class="skill-label">HTML</span>
-            <div class="skill-bar-wrap">
-                <div class="skill-bar-fill" style="width:70%"></div>
-            </div>
-            <span class="skill-pct">70%</span>
-        </div>
-        <div class="skill-row">
-            <span class="skill-label">Python</span>
-            <div class="skill-bar-wrap">
-                <div class="skill-bar-fill" style="width:50%"></div>
-            </div>
-            <span class="skill-pct">50%</span>
-        </div>
-        <div class="skill-row">
-            <span class="skill-label">JavaScript</span>
-            <div class="skill-bar-wrap">
-                <div class="skill-bar-fill" style="width:50%"></div>
-            </div>
-            <span class="skill-pct">50%</span>
-        </div>
-       
+    <span class="skill-label"><i class="fas fa-brain"></i>AI</span>
+    <div class="skill-bar-wrap">
+        <div class="skill-bar-fill" style="--target-width:70%"></div>
+    </div>
+    <span class="skill-pct">70%</span>
+</div>
+<div class="skill-row">
+    <span class="skill-label"><i class="fab fa-css3-alt"></i>CSS</span>
+    <div class="skill-bar-wrap">
+        <div class="skill-bar-fill" style="--target-width:60%"></div>
+    </div>
+    <span class="skill-pct">60%</span>
+</div>
+<div class="skill-row">
+    <span class="skill-label"><i class="fab fa-html5"></i>HTML</span>
+    <div class="skill-bar-wrap">
+        <div class="skill-bar-fill" style="--target-width:70%"></div>
+    </div>
+    <span class="skill-pct">70%</span>
+</div>
+<div class="skill-row">
+    <span class="skill-label"><i class="fab fa-python"></i>Python</span>
+    <div class="skill-bar-wrap">
+        <div class="skill-bar-fill" style="--target-width:50%"></div>
+    </div>
+    <span class="skill-pct">50%</span>
+</div>
+<div class="skill-row">
+    <span class="skill-label"><i class="fab fa-js"></i>JavaScript</span>
+    <div class="skill-bar-wrap">
+        <div class="skill-bar-fill" style="--target-width:50%"></div>
+    </div>
+    <span class="skill-pct">50%</span>
+</div>
     </section>
 
     <!-- PROJECTS -->
@@ -172,6 +175,58 @@
                 nav.classList.remove('active');
             });
         });
+        // ── TYPING ANIMATION JS ──
+(function () {
+    const words = ['Frontend Developer', 'Video Editor', 'Digital Marketer', 'Tech Support'];
+    const el = document.getElementById('typing-text');
+    let wordIndex = 0, charIndex = 0, deleting = false;
+
+    function type() {
+        const current = words[wordIndex];
+        if (!deleting) {
+            el.textContent = current.slice(0, ++charIndex);
+            if (charIndex === current.length) {
+                deleting = true;
+                setTimeout(type, 1600);
+                return;
+            }
+            setTimeout(type, 80);
+        } else {
+            el.textContent = current.slice(0, --charIndex);
+            if (charIndex === 0) {
+                deleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                setTimeout(type, 400);
+                return;
+            }
+            setTimeout(type, 45);
+        }
+    }
+    type();
+})();
+
+// ── SKILL BAR ANIMATION JS ──
+(function () {
+    const skillsSection = document.getElementById('skills');
+    let animated = false;
+
+    const observer = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting && !animated) {
+            animated = true;
+            document.querySelectorAll('.skill-bar-fill').forEach(function (bar) {
+                // Small delay so CSS transition fires after paint
+                requestAnimationFrame(function () {
+                    requestAnimationFrame(function () {
+                        bar.classList.add('animated');
+                    });
+                });
+            });
+            observer.disconnect();
+        }
+    }, { threshold: 0.3 });
+
+    observer.observe(skillsSection);
+})();
     </script>
 </body>
 </html>
