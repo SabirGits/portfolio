@@ -4,10 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabir Khan (Tech Sabir) ~ Portfolio</title>
-   <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Scroll Progress Bar -->
+    <div class="progress-bar" id="progress-bar"></div>
+
+    <!-- Background Orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- NAVBAR -->
     <div class="navbar" id="home">
@@ -39,70 +55,82 @@
             <span class="badge">TechSabir</span>
         </h1>
         <div class="typing-wrapper">
-        <span class="typing-text" id="typing-text"></span><span class="typing-cursor"></span>
-       </div>
-        <p class="role">Tech Support • Video Editing • Digital Marketing</p>
+            <span class="typing-text" id="typing-text"></span><span class="typing-cursor"></span>
+        </div>
+        <p class="role">Tech Support &nbsp;•&nbsp; Video Editing &nbsp;•&nbsp; Digital Marketing</p>
         <div class="cta">
-            <a class="btn email" href="mailto:sabirrayabka@gmail.com" target="_blank">Email Me</a>
-            <a class="btn whatsapp" href="https://wa.me/917410945190?text=Hello%20Sabir" target="_blank">WhatsApp</a>
+            <a class="btn email" href="mailto:sabirrayabka@gmail.com" target="_blank">
+                <i class="fas fa-envelope"></i> Email Me
+            </a>
+            <a class="btn whatsapp" href="https://wa.me/917410945190?text=Hello%20Sabir" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
         </div>
         <div class="socials">
-            <a class="instagram" href="https://www.instagram.com/muh_sabir2967" target="_blank">Instagram</a>
-            <a class="linkedin" href="https://www.linkedin.com/in/sabir-khan-2a4339389" target="_blank">LinkedIn</a>
+            <a class="instagram" href="https://www.instagram.com/muh_sabir2967" target="_blank">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a class="linkedin" href="https://www.linkedin.com/in/sabir-khan-2a4339389" target="_blank">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+            </a>
         </div>
     </div>
 
     <!-- ABOUT -->
     <section class="section-card" id="aboutme">
-        <h2>About Me</h2>
+        <div class="section-divider"></div>
+        <h2>About <span class="highlight">Me</span></h2>
         <p>Hi! I'm Sabir from Alwar. I love technology and creative work. I help people with tech support, video editing and digital marketing.<br><br>
         I enjoy solving problems, making engaging videos and helping small businesses grow online.</p>
     </section>
 
     <!-- SKILLS -->
     <section class="section-card skills-card" id="skills">
-        <h2>My <span style="color:#ff4a00;">Skills</span></h2>
+        <div class="section-divider" style="margin: 0 auto 22px;"></div>
+        <h2>My <span class="highlight">Skills</span></h2>
 
-         <div class="skill-row">
-    <span class="skill-label"><i class="fas fa-brain"></i>AI</span>
-    <div class="skill-bar-wrap">
-        <div class="skill-bar-fill" style="--target-width:70%"></div>
-    </div>
-    <span class="skill-pct">70%</span>
-</div>
-<div class="skill-row">
-    <span class="skill-label"><i class="fab fa-css3-alt"></i>CSS</span>
-    <div class="skill-bar-wrap">
-        <div class="skill-bar-fill" style="--target-width:60%"></div>
-    </div>
-    <span class="skill-pct">60%</span>
-</div>
-<div class="skill-row">
-    <span class="skill-label"><i class="fab fa-html5"></i>HTML</span>
-    <div class="skill-bar-wrap">
-        <div class="skill-bar-fill" style="--target-width:70%"></div>
-    </div>
-    <span class="skill-pct">70%</span>
-</div>
-<div class="skill-row">
-    <span class="skill-label"><i class="fab fa-python"></i>Python</span>
-    <div class="skill-bar-wrap">
-        <div class="skill-bar-fill" style="--target-width:50%"></div>
-    </div>
-    <span class="skill-pct">50%</span>
-</div>
-<div class="skill-row">
-    <span class="skill-label"><i class="fab fa-js"></i>JavaScript</span>
-    <div class="skill-bar-wrap">
-        <div class="skill-bar-fill" style="--target-width:50%"></div>
-    </div>
-    <span class="skill-pct">50%</span>
-</div>
+        <div class="skill-row">
+            <span class="skill-label"><i class="fas fa-brain"></i>AI</span>
+            <div class="skill-bar-wrap">
+                <div class="skill-bar-fill" style="--target-width:70%"></div>
+            </div>
+            <span class="skill-pct">70%</span>
+        </div>
+        <div class="skill-row">
+            <span class="skill-label"><i class="fab fa-css3-alt"></i>CSS</span>
+            <div class="skill-bar-wrap">
+                <div class="skill-bar-fill" style="--target-width:60%"></div>
+            </div>
+            <span class="skill-pct">60%</span>
+        </div>
+        <div class="skill-row">
+            <span class="skill-label"><i class="fab fa-html5"></i>HTML</span>
+            <div class="skill-bar-wrap">
+                <div class="skill-bar-fill" style="--target-width:70%"></div>
+            </div>
+            <span class="skill-pct">70%</span>
+        </div>
+        <div class="skill-row">
+            <span class="skill-label"><i class="fab fa-js"></i>JS</span>
+            <div class="skill-bar-wrap">
+                <div class="skill-bar-fill" style="--target-width:50%"></div>
+            </div>
+            <span class="skill-pct">50%</span>
+        </div>
+        <div class="skill-row">
+            <span class="skill-label"><i class="fab fa-python"></i>Python</span>
+            <div class="skill-bar-wrap">
+                <div class="skill-bar-fill" style="--target-width:50%"></div>
+            </div>
+            <span class="skill-pct">50%</span>
+        </div>
+        
     </section>
 
     <!-- PROJECTS -->
     <section class="section-card" id="project">
-        <h2>My <span style="color:#ff4a00;">Projects</span></h2>
+        <div class="section-divider"></div>
+        <h2>My <span class="highlight">Projects</span></h2>
         <div class="project-grid">
             <div class="project-item">
                 <h3>📌 Fox University Website</h3>
@@ -121,6 +149,7 @@
 
     <!-- EDUCATION -->
     <section class="section-card" id="education">
+        <div class="section-divider"></div>
         <h2>Education</h2>
         <div class="edu-list">
             <div class="edu-item">
@@ -140,28 +169,29 @@
 
     <!-- CONTACT -->
     <section class="section-card" id="contact">
-        <h2>Contact</h2>
+        <div class="section-divider"></div>
+        <h2>Get In <span class="highlight">Touch</span></h2>
         <div class="contact-info">
-            <p><strong>Phone:</strong> +91 7410945190</p>
-            <p><strong>Email:</strong> sabirrayabka@gmail.com</p>
-            <p><strong>Location:</strong> Alwar, Rajasthan, India</p>
+            <p><strong>Phone</strong> +91 7410945190</p>
+            <p><strong>Email</strong> sabirrayabka@gmail.com</p>
+            <p><strong>Location</strong> Alwar, Rajasthan, India</p>
         </div>
         <div class="contact-btns">
-            <a class="btn-outline" href="tel:+917410945190">📞 Call</a>
-            <a class="btn-outline" href="mailto:sabirrayabka@gmail.com">✉️ Send Email</a>
+            <a class="btn-outline" href="tel:+917410945190"><i class="fas fa-phone"></i> Call</a>
+            <a class="btn-outline" href="mailto:sabirrayabka@gmail.com"><i class="fas fa-envelope"></i> Send Email</a>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
-        Built with ❤️ by Sabir — © <span id="year"></span>
+        Built with <span>♥</span> by Sabir &nbsp;—&nbsp; © <span id="year"></span>
     </footer>
 
     <script>
-        // Set current year in footer
+        /* ── YEAR ── */
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Hamburger menu toggle
+        /* ── HAMBURGER MENU ── */
         const toggle = document.getElementById('menu-toggle');
         const nav = document.getElementById('nav-menu');
 
@@ -169,64 +199,102 @@
             nav.classList.toggle('active');
         });
 
-        // Close menu when a nav link is clicked (mobile UX)
         document.querySelectorAll('#nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('active');
-            });
+            link.addEventListener('click', () => nav.classList.remove('active'));
         });
-        // ── TYPING ANIMATION JS ──
-(function () {
-    const words = ['Frontend Developer', 'Video Editor', 'Digital Marketer', 'Tech Support'];
-    const el = document.getElementById('typing-text');
-    let wordIndex = 0, charIndex = 0, deleting = false;
 
-    function type() {
-        const current = words[wordIndex];
-        if (!deleting) {
-            el.textContent = current.slice(0, ++charIndex);
-            if (charIndex === current.length) {
-                deleting = true;
-                setTimeout(type, 1600);
-                return;
+        /* ── NAVBAR SCROLL EFFECT ── */
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        }, { passive: true });
+
+        /* ── SCROLL PROGRESS BAR ── */
+        const bar = document.getElementById('progress-bar');
+        window.addEventListener('scroll', () => {
+            const docH = document.documentElement.scrollHeight - window.innerHeight;
+            const pct = docH > 0 ? (window.scrollY / docH) * 100 : 0;
+            bar.style.width = pct + '%';
+        }, { passive: true });
+
+        /* ── SCROLL TO TOP ── */
+        const scrollTopBtn = document.getElementById('scroll-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 320) scrollTopBtn.classList.add('visible');
+            else scrollTopBtn.classList.remove('visible');
+        }, { passive: true });
+        scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        /* ── TYPING ANIMATION ── */
+        (function () {
+            const words = ['Frontend Developer', 'Video Editor', 'Digital Marketer', 'Tech Support'];
+            const el = document.getElementById('typing-text');
+            let wordIndex = 0, charIndex = 0, deleting = false;
+
+            function type() {
+                const current = words[wordIndex];
+                if (!deleting) {
+                    el.textContent = current.slice(0, ++charIndex);
+                    if (charIndex === current.length) {
+                        deleting = true;
+                        setTimeout(type, 1600);
+                        return;
+                    }
+                    setTimeout(type, 80);
+                } else {
+                    el.textContent = current.slice(0, --charIndex);
+                    if (charIndex === 0) {
+                        deleting = false;
+                        wordIndex = (wordIndex + 1) % words.length;
+                        setTimeout(type, 400);
+                        return;
+                    }
+                    setTimeout(type, 45);
+                }
             }
-            setTimeout(type, 80);
-        } else {
-            el.textContent = current.slice(0, --charIndex);
-            if (charIndex === 0) {
-                deleting = false;
-                wordIndex = (wordIndex + 1) % words.length;
-                setTimeout(type, 400);
-                return;
-            }
-            setTimeout(type, 45);
-        }
-    }
-    type();
-})();
+            type();
+        })();
 
-// ── SKILL BAR ANIMATION JS ──
-(function () {
-    const skillsSection = document.getElementById('skills');
-    let animated = false;
+        /* ── SKILL BAR ANIMATION ── */
+        (function () {
+            const skillsSection = document.getElementById('skills');
+            let animated = false;
 
-    const observer = new IntersectionObserver(function (entries) {
-        if (entries[0].isIntersecting && !animated) {
-            animated = true;
-            document.querySelectorAll('.skill-bar-fill').forEach(function (bar) {
-                // Small delay so CSS transition fires after paint
-                requestAnimationFrame(function () {
-                    requestAnimationFrame(function () {
-                        bar.classList.add('animated');
+            const observer = new IntersectionObserver(function (entries) {
+                if (entries[0].isIntersecting && !animated) {
+                    animated = true;
+                    document.querySelectorAll('.skill-bar-fill').forEach(function (bar) {
+                        requestAnimationFrame(function () {
+                            requestAnimationFrame(function () {
+                                bar.classList.add('animated');
+                            });
+                        });
                     });
-                });
-            });
-            observer.disconnect();
-        }
-    }, { threshold: 0.3 });
+                    observer.disconnect();
+                }
+            }, { threshold: 0.3 });
 
-    observer.observe(skillsSection);
-})();
+            observer.observe(skillsSection);
+        })();
+
+        /* ── SECTION SCROLL REVEAL ── */
+        (function () {
+            const cards = document.querySelectorAll('.section-card');
+
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+            cards.forEach(function (card) {
+                observer.observe(card);
+            });
+        })();
     </script>
 </body>
 </html>
